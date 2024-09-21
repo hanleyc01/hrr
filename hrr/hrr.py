@@ -56,7 +56,7 @@ class HRR(Sequence):
 
     # The addition-like operation is used to superpose vectors or add them to a set.
     def __add__(self,other):
-        if isinstance(other,HRR) or isinstance(other, HRRscale):
+        if isinstance(other,HRR):
             return other + self.v
         else:
             return HRR(data=other + self.v)
